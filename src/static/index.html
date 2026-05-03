@@ -13,6 +13,70 @@
     </header>
 
     <main>
+      <section id="auth-container">
+        <div class="auth-panel">
+          <h3>Login</h3>
+          <form id="login-form">
+            <div class="form-group">
+              <label for="login-email">Email:</label>
+              <input type="email" id="login-email" required placeholder="admin@mergington.edu" />
+            </div>
+            <div class="form-group">
+              <label for="login-password">Password:</label>
+              <input type="password" id="login-password" required placeholder="Enter your password" />
+            </div>
+            <button type="submit">Login</button>
+          </form>
+          <div id="login-message" class="hidden"></div>
+        </div>
+
+        <div class="auth-panel">
+          <h3>Register</h3>
+          <form id="register-form">
+            <div class="form-group">
+              <label for="register-username">Name:</label>
+              <input type="text" id="register-username" required placeholder="Your name" />
+            </div>
+            <div class="form-group">
+              <label for="register-email">Email:</label>
+              <input type="email" id="register-email" required placeholder="your-email@mergington.edu" />
+            </div>
+            <div class="form-group">
+              <label for="register-password">Password:</label>
+              <input type="password" id="register-password" required placeholder="Choose a password" />
+            </div>
+            <div class="form-group">
+              <label for="register-role">Role:</label>
+              <select id="register-role" required>
+                <option value="student">Student</option>
+                <option value="admin">Admin</option>
+              </select>
+            </div>
+            <button type="submit">Register</button>
+          </form>
+          <div id="register-message" class="hidden"></div>
+        </div>
+      </section>
+
+      <section id="dashboard-container" class="hidden">
+        <div class="dashboard-header">
+          <p id="user-details"></p>
+          <button id="logout-btn" class="hidden">Logout</button>
+        </div>
+
+        <div id="student-dashboard" class="dashboard-card hidden">
+          <h3>Student Dashboard</h3>
+          <p>View your signed-up activities and join new ones from the section below.</p>
+          <div id="my-activities"></div>
+        </div>
+
+        <div id="admin-dashboard" class="dashboard-card hidden">
+          <h3>Admin Dashboard</h3>
+          <p>Review student participation and manage activity signups.</p>
+          <div id="admin-activity-summary"></div>
+        </div>
+      </section>
+
       <section id="activities-container">
         <h3>Available Activities</h3>
         <div id="activities-list">
@@ -23,6 +87,7 @@
 
       <section id="signup-container">
         <h3>Sign Up for an Activity</h3>
+        <p id="signup-note" class="info">Log in to use the student or admin dashboard.</p>
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
