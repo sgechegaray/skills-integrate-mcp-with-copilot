@@ -6,6 +6,8 @@ A super simple FastAPI application that allows students to view and sign up for 
 
 - View all available extracurricular activities
 - Sign up for activities
+- User authentication with admin and student roles
+- Role-specific dashboards for students and administrators
 
 ## Getting Started
 
@@ -31,6 +33,9 @@ A super simple FastAPI application that allows students to view and sign up for 
 | ------ | ----------------------------------------------------------------- | ------------------------------------------------------------------- |
 | GET    | `/activities`                                                     | Get all activities with their details and current participant count |
 | POST   | `/activities/{activity_name}/signup?email=student@mergington.edu` | Sign up for an activity                                             |
+| POST   | `/auth/register`                                                  | Register a new user with a role of `admin` or `student`             |
+| POST   | `/auth/login`                                                     | Login and receive an authentication token                          |
+| GET    | `/users/me`                                                       | Get the current authenticated user's profile                        |
 
 ## Data Model
 
